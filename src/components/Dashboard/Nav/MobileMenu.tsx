@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useWindowSize } from "usehooks-ts";
 
-import { useBoardDialogStore } from "@/lib/store";
-
 import ProjectLink from "./ProfileLink";
 import ThemeSwitch from "./ThemeSwitch";
 
