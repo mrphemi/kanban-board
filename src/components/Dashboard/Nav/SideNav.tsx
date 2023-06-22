@@ -21,7 +21,7 @@ const SideNav = () => {
     if (width < 768) {
       close();
     }
-  }, [width]);
+  }, [width, close]);
 
   return (
     <div
