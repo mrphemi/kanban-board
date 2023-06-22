@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-kb-grey-light-primary dark:bg-kb-black-primary;
+    @apply bg-kb-grey-light-primary dark:bg-kb-black-primary overflow-hidden;
   }
 }
 
@@ -36,4 +36,24 @@
   .container {
     @apply max-w-full px-4;
   }
+}
+
+.menu-trigger .arrow {
+  @apply duration-300;
+}
+
+.menu-trigger[data-state="open"] .arrow {
+  @apply rotate-180;
+}
+
+.menu-trigger[data-state="closed"] .arrow {
+  @apply rotate-0;
+}
+
+#dashboard-content[data-side-nav-open="true"] {
+  @apply md:ml-[261px];
+}
+
+#dashboard-content[data-side-nav-open="false"] {
+  @apply ml-0;
 }

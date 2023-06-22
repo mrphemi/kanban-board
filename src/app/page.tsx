@@ -5,8 +5,8 @@ export default async function Home() {
     <>
       <main className="container">
         <div className="mt-20">
-          <Link href="/dashboard" className="heading-xl text-white">
-            Dashboard
+          <Link href="/boards" className="heading-xl text-white">
+            Boards
           </Link>
         </div>
       </main>

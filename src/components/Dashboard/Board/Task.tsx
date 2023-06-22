@@ -1,6 +1,6 @@
 const Task = () => {
   return (
-    <div className="w-full bg-white dark:bg-kb-black-tertiary space-y-2 py-6 px-4 rounded-lg">
+    <div className="w-full bg-white dark:bg-kb-black-tertiary space-y-2 py-6 px-4 rounded-lg cursor-grab">
       <h2 className="heading-md text-kb-black-primary dark:text-white">
         Build UI for onboarding flow
       </h2>

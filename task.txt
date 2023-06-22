@@ -1,7 +1,10 @@
 Build a kanban board similar to asana
 
-Database & API - Pocketbase
-UI - shadcn, radix ui, tailwindcss, react dnd
+Database & API 
+- Pocketbase
+
+UI 
+- radix ui, tailwindcss, react dnd
 
 Auth 
 - Login and signup (social OAuth, email and password later)

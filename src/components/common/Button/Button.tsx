@@ -32,9 +32,16 @@ export interface Props
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof button> {}
 
-const Button = ({ label, className, intent, size, children }: Props) => {
+const Button = ({
+  label,
+  className,
+  intent,
+  size,
+  children,
+  onClick,
+}: Props) => {
   return (
-    <button className={button({ intent, size, className })}>
+    <button className={button({ intent, size, className })} onClick={onClick}>
       {label} {children}
     </button>
   );
