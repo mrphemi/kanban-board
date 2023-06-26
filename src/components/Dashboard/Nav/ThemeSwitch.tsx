@@ -1,22 +1,32 @@
+import { useState, useEffect } from "react";
 import * as Switch from "@radix-ui/react-switch";
 
 import { twMerge } from "tailwind-merge";
 import useDarkMode from "use-dark-mode";
+import { useMediaQuery } from "usehooks-ts";
 
 type ThemeSwitchProps = React.ComponentPropsWithoutRef<"div">;
 
 const ThemeSwitch = ({ className }: ThemeSwitchProps) => {
+  const isDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
   const element =
     typeof document !== "undefined" ? document.documentElement : undefined;
 
   const darkMode = useDarkMode(
-    window.matchMedia("(prefers-color-scheme: dark)").matches ?? false,
+    isDarkMode,
     {
       classNameDark: "dark",
       element: element,
     }
   );
 
+  const [darkModeValue, setDarkModeValue] = useState<boolean>();
+
+  useEffect(() => {
+    setDarkModeValue(darkMode.value);
+  }, [darkMode.value])
+  
   return (
     <div
       className={twMerge(
@@ -32,7 +42,7 @@ const ThemeSwitch = ({ className }: ThemeSwitchProps) => {
       </svg>
 
       <Switch.Root
-        checked={darkMode.value}
+        checked={darkModeValue}
         onCheckedChange={darkMode.toggle}
         className="SwitchRoot relative h-5 w-10 bg-kb-purple-primary hover:bg-kb-purple-secondary transition-colors duration-150 rounded-full outline-none cursor-pointer"
       >
