@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import * as Popover from "@radix-ui/react-popover";
 import { twMerge } from "tailwind-merge";
 
-import { useSideNavigationStore, useDeleteDialogStore } from "@/lib/store";
+import { useSideNavigationStore, useDeleteModalStore } from "@/lib/store";
 
 import Button from "../../common/Button/Button";
 import LogoMobile from "../../common/Logos/LogoMobile";
@@ -88,7 +88,7 @@ export default Nav;
 
 // Edit and delete board popover
 const BoardPopover = () => {
-  const { setOpen } = useDeleteDialogStore();
+  const { open } = useDeleteModalStore();
 
   const pathname = usePathname();
 
@@ -126,7 +126,7 @@ const BoardPopover = () => {
             className="PopoverClose cursor-pointer"
             aria-label="Close"
             onClick={() => {
-              setOpen(true, "task");
+              open("task");
             }}
           >
             <p className=" text-kb-mandy-primary copy-lg">Delete Board</p>

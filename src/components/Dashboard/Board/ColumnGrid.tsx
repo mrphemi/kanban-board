@@ -10,6 +10,7 @@ const ColumnGrid = () => {
         <Column />
         <Column />
         <Column />
+        <NewColumn />
       </div>
 
       {/* <NoColumn /> */}
@@ -26,6 +27,16 @@ const NoColumn = () => {
         This board is empty. Create a new column to get started.
       </p>
       <Button>+ Add New Column</Button>
+    </div>
+  );
+};
+
+const NewColumn = () => {
+  return (
+    <div className="flex flex-col justify-center items-center min-w-[280px] max-w-[280px] mt-10 self-stretch bg-kb-grey-light-secondary dark:bg-kb-black-tertiary rounded-lg">
+      <Button className="bg-transparent hover:bg-transparent text-kb-grey-dark-secondary hover:text-kb-purple-primary">
+        + New Column
+      </Button>
     </div>
   );
 };

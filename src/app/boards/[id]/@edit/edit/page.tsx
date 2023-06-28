@@ -1,9 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { DialogTitle } from "@radix-ui/react-dialog";
+import { DialogTitle as ModalTitle } from "@radix-ui/react-dialog";
 
-import Dialog from "@/components/Dashboard/Dialog";
+import Modal from "@/components/Dashboard/Modal";
 import BoardForm from "@/components/Dashboard/Board/BoardForm";
 
 export default async function EditBoard() {
@@ -11,12 +11,12 @@ export default async function EditBoard() {
 
   return (
     <>
-      <Dialog onInteractOutside={() => router.back()}>
-        <DialogTitle className="heading-lg mb-6 text-kb-black-primary dark:text-white">
+      <Modal onInteractOutside={() => router.back()}>
+        <ModalTitle className="heading-lg mb-6 text-kb-black-primary dark:text-white">
           Edit Project Name
-        </DialogTitle>
+        </ModalTitle>
         <BoardForm />
-      </Dialog>
+      </Modal>
     </>
   );
 }

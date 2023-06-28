@@ -1,14 +1,14 @@
 "use client";
 
-import { DialogTitle } from "@radix-ui/react-dialog";
+import { DialogTitle as ModalTitle } from "@radix-ui/react-dialog";
 
-import { useDeleteDialogStore } from "@/lib/store";
+import { useDeleteModalStore } from "@/lib/store";
 
 import Button from "../common/Button/Button";
-import Dialog from "./Dialog";
+import Modal from "./Modal";
 
-const DeleteDialog = () => {
-  const { isOpen, close, target } = useDeleteDialogStore();
+const DeleteModal = () => {
+  const { isOpen, close, target } = useDeleteModalStore();
 
   const text =
     target === "board"
@@ -16,10 +16,10 @@ const DeleteDialog = () => {
       : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae saepe culpa nostrum! Dolorem, quibusdam iure. Hic repudiandae soluta nulla explicabo?";
 
   return (
-    <Dialog isOpen={isOpen} onFocusOutside={(e) => e.preventDefault()}>
-      <DialogTitle className="heading-lg mb-6 text-kb-mandy-primary">
+    <Modal isOpen={isOpen} onFocusOutside={(e) => e.preventDefault()}>
+      <ModalTitle className="heading-lg mb-6 text-kb-mandy-primary">
         Delete this board?
-      </DialogTitle>
+      </ModalTitle>
       <div>
         <p className="copy-lg text-kb-grey-dark-secondary">{text}</p>
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-6">
@@ -37,8 +37,8 @@ const DeleteDialog = () => {
           </Button>
         </div>
       </div>
-    </Dialog>
+    </Modal>
   );
 };
 
-export default DeleteDialog;
+export default DeleteModal;

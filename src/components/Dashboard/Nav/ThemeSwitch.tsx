@@ -13,20 +13,18 @@ const ThemeSwitch = ({ className }: ThemeSwitchProps) => {
   const element =
     typeof document !== "undefined" ? document.documentElement : undefined;
 
-  const darkMode = useDarkMode(
-    isDarkMode,
-    {
-      classNameDark: "dark",
-      element: element,
-    }
-  );
+  const darkMode = useDarkMode(isDarkMode, {
+    classNameDark: "dark",
+    classNameLight: "light",
+    element: element,
+  });
 
   const [darkModeValue, setDarkModeValue] = useState<boolean>();
 
   useEffect(() => {
     setDarkModeValue(darkMode.value);
-  }, [darkMode.value])
-  
+  }, [darkMode.value]);
+
   return (
     <div
       className={twMerge(

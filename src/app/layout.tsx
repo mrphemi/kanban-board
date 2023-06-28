@@ -1,3 +1,4 @@
+import Script from "next/script";
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
@@ -15,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script src="/noflash.js" />
+      </head>
       <body className={`${jakarta.className} min-h-screen`}>{children}</body>
     </html>
   );

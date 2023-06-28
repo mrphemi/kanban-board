@@ -6,12 +6,12 @@ interface SideNavigationState {
   close: () => void;
 }
 
-type DeleteDialogTarget = "board" | "task";
+type DeleteModalTarget = "board" | "task";
 
-interface DeleteDialogState {
+interface DeleteModalState {
   isOpen: boolean;
-  target?: DeleteDialogTarget;
-  setOpen: (open: boolean, target: DeleteDialogTarget) => void;
+  target?: DeleteModalTarget;
+  open: (target: DeleteModalTarget) => void;
   close: () => void;
 }
 
@@ -21,9 +21,9 @@ export const useSideNavigationStore = create<SideNavigationState>((set) => ({
   close: () => set({ isOpen: false }),
 }));
 
-export const useDeleteDialogStore = create<DeleteDialogState>((set) => ({
+export const useDeleteModalStore = create<DeleteModalState>((set) => ({
   isOpen: false,
   target: "board",
-  setOpen: (open, target) => set({ isOpen: open, target: target }),
+  open: (target) => set({ isOpen: true, target: target }),
   close: () => set({ isOpen: false }),
 }));

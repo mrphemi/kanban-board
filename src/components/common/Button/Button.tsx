@@ -1,4 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority";
+import { twMerge } from "tailwind-merge";
 
 const button = cva("rounded-3xl capitalize transition-colors duration-300", {
   variants: {
@@ -41,7 +42,10 @@ const Button = ({
   onClick,
 }: Props) => {
   return (
-    <button className={button({ intent, size, className })} onClick={onClick}>
+    <button
+      className={twMerge(button({ intent, size, className }))}
+      onClick={onClick}
+    >
       {label} {children}
     </button>
   );
