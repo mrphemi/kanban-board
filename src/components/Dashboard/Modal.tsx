@@ -1,4 +1,3 @@
-import { useState } from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 interface ModalProps extends DialogPrimitive.DialogContentProps {

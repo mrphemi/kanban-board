@@ -58,7 +58,7 @@ const Nav = () => {
           Platform Launch
         </h1>
 
-        {/* Add task, edit and delete project ctas */}
+        {/* Add task, edit and delete board ctas */}
         <div className="flex items-center gap-x-4 ml-auto pt-5 pb-[19px]">
           <Button size="small">
             <svg
@@ -74,7 +74,7 @@ const Nav = () => {
             </svg>
             <span className="hidden md:block heading-md">+ Add New Task</span>
           </Button>
-          <BoardPopover />
+          <BoardActions />
         </div>
       </div>
 
@@ -87,7 +87,7 @@ const Nav = () => {
 export default Nav;
 
 // Edit and delete board popover
-const BoardPopover = () => {
+const BoardActions = () => {
   const { open } = useDeleteModalStore();
 
   const pathname = usePathname();
@@ -106,7 +106,7 @@ const BoardPopover = () => {
 
       <Popover.Portal>
         <Popover.Content
-          className="PopoverContent space-y-4 bg-white dark:bg-kb-black-secondary p-4 outline-none rounded-lg mr-4 animate-in fade-in duration-300"
+          className="space-y-4 bg-white dark:bg-kb-black-secondary p-4 outline-none rounded-lg mr-4 animate-in fade-in duration-300"
           sideOffset={20}
         >
           <Popover.Close
@@ -126,7 +126,7 @@ const BoardPopover = () => {
             className="PopoverClose cursor-pointer"
             aria-label="Close"
             onClick={() => {
-              open("task");
+              open("board");
             }}
           >
             <p className=" text-kb-mandy-primary copy-lg">Delete Board</p>

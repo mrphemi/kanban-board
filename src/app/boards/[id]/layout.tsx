@@ -1,8 +1,8 @@
-import Nav from "@/components/Dashboard/Nav/Nav";
-
 interface LayoutProps {
   children: React.ReactNode;
   edit: React.ReactNode;
+  task: React.ReactNode;
+  info: React.ReactNode;
 }
 
 export default function Layout(props: LayoutProps) {
@@ -10,6 +10,7 @@ export default function Layout(props: LayoutProps) {
     <>
       {props.children}
       {props.edit}
+      {props.task}
     </>
   );
 }

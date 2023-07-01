@@ -12,13 +12,13 @@ const DeleteModal = () => {
 
   const text =
     target === "board"
-      ? "Are you sure you want to delete the ‘Platform Launch’ board? This action will remove all columns and tasks and cannot be reversed."
-      : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae saepe culpa nostrum! Dolorem, quibusdam iure. Hic repudiandae soluta nulla explicabo?";
+      ? "Are you sure you want to delete the ‘{board name}’ board? This action will remove all columns and tasks and cannot be reversed."
+      : "Are you sure you want to delete the ‘{task name}’ task and its subtasks? This action cannot be reversed.";
 
   return (
     <Modal isOpen={isOpen} onFocusOutside={(e) => e.preventDefault()}>
       <ModalTitle className="heading-lg mb-6 text-kb-mandy-primary">
-        Delete this board?
+        Delete this {target}?
       </ModalTitle>
       <div>
         <p className="copy-lg text-kb-grey-dark-secondary">{text}</p>

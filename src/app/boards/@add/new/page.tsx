@@ -6,7 +6,7 @@ import { DialogTitle as ModalTitle } from "@radix-ui/react-dialog";
 import Modal from "@/components/Dashboard/Modal";
 import BoardForm from "@/components/Dashboard/Board/BoardForm";
 
-export default async function AddBoard() {
+export default function AddBoard() {
   const router = useRouter();
 
   return (

@@ -1,7 +1,7 @@
 import ColumnGrid from "@/components/Dashboard/Board/ColumnGrid";
 import DeleteDialog from "@/components/Dashboard/DeleteDialog";
 
-export default async function Dashboard() {
+export default function Dashboard() {
   return (
     <>
       <main id="dashboard-content" className="duration-200">
