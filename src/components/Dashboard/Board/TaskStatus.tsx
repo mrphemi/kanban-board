@@ -26,7 +26,7 @@ const TaskStatus = ({ statusList }: TaskStatusProps) => {
             <path
               d="M0.798431 1.54883L5.49691 6.24731L10.1954 1.54883"
               stroke="#635FC7"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </Select.Icon>
