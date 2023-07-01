@@ -40,7 +40,11 @@ const TaskStatus = ({ statusList }: TaskStatusProps) => {
           <Select.Viewport className="p-4 h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]">
             <Select.Group className="space-y-2 capitalize">
               {statusList.map((status) => (
-                <Select.Item className="cursor-pointer" value={status}>
+                <Select.Item
+                  key={status}
+                  className="cursor-pointer"
+                  value={status}
+                >
                   <Select.ItemText>{status}</Select.ItemText>
                 </Select.Item>
               ))}
