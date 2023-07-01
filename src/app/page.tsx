@@ -8,10 +8,6 @@ export default async function Home() {
           <Link href="/boards" className="heading-xl text-white">
             Boards
           </Link>
-
-          <Link href="/about" className="heading-xl text-white">
-            About
-          </Link>
         </div>
       </main>
     </>
