@@ -11,7 +11,7 @@ const BoardForm = () => {
   return (
     <>
       <Form.Root>
-        <Form.Field className="grid" name="email">
+        <Form.Field className="grid" name="boardName">
           <div className="flex items-baseline justify-between mb-2">
             <Form.Label className="text-kb-grey-dark-secondary dark:text-white heading-sm tracking-normal">
               Board Name
@@ -22,7 +22,7 @@ const BoardForm = () => {
           </div>
           <Form.Control asChild>
             <input
-              className="text-white rounded border border-kb-grey-dark-secondary bg-transparent py-2 pl-4 pr-2 placeholder:copy-lg outline-none focus:border-kb-purple-primary"
+              className="text-kb-black-primary dark:text-white rounded border border-kb-grey-dark-secondary/25 bg-transparent py-2 pl-4 pr-2 placeholder:copy-lg outline-none focus:border-kb-purple-primary copy-lg"
               type="text"
               required
               placeholder="e.g. Web Design"

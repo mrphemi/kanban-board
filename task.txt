@@ -1,7 +1,7 @@
 Build a kanban board similar to asana
 
 Database & API 
-- Pocketbase
+- Pocketbase or supabase
 
 UI 
 - radix ui, tailwindcss, react dnd

@@ -1,9 +1,10 @@
 import * as Form from "@radix-ui/react-form";
 
-import { Column } from "@/lib/types";
-
 interface ColumnProps {
-  column: Column;
+  column: {
+    columnId: string;
+    name: string;
+  };
   onUpdate: (id: string, name: string) => void;
   onDelete: (id: string) => void;
 }
@@ -14,7 +15,7 @@ const Column = ({ column, onDelete, onUpdate }: ColumnProps) => {
       <Form.Field className="w-full" name="column">
         <Form.Control asChild>
           <input
-            className="text-white rounded border border-kb-grey-dark-secondary bg-transparent py-2 pl-4 pr-2 placeholder:copy-lg w-full outline-none"
+            className="text-kb-black-primary dark:text-white rounded border border-kb-grey-dark-secondary/25 bg-transparent py-2 pl-4 pr-2 placeholder:copy-lg w-full outline-none copy-lg"
             type="text"
             required
             placeholder="Enter column name"

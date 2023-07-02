@@ -69,7 +69,7 @@ export default function TaskModal() {
           </div>
 
           <div>
-            <h3 className="heading-sm text-kb-grey-dark-secondary mb-2">
+            <h3 className="heading-sm text-kb-grey-dark-secondary dark:text-white mb-2">
               Current Status
             </h3>
             <TaskStatus statusList={statusList} />

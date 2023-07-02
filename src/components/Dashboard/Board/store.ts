@@ -1,9 +1,8 @@
 import { create } from "zustand";
 
-import { Column } from "@/lib/types";
+import { Board } from "@/lib/types";
 
-interface BoardState {
-  columns: Column[];
+interface BoardState extends Board {
   addColumn: () => void;
   updateColumn: (id: string, name: string) => void;
   deleteColumn: (id: string) => void;
@@ -12,10 +11,15 @@ interface BoardState {
 
 export const useBoardStore = create<BoardState>((set) => ({
   columns: [],
+  name: "",
+  boardId: "",
 
   addColumn: () =>
     set((state) => ({
-      columns: [...state.columns, { name: "", columnId: crypto.randomUUID() }],
+      columns: [
+        ...state.columns,
+        { name: "", columnId: crypto.randomUUID(), tasks: [] },
+      ],
     })),
 
   updateColumn: (id: string, name: string) =>
