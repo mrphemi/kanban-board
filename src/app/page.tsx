@@ -5,7 +5,7 @@ export default async function Home() {
     <>
       <main className="container">
         <div className="mt-20 flex gap-x-5">
-          <Link href="/boards" className="heading-xl text-white">
+          <Link href="/boards/3" className="heading-xl text-white">
             Boards
           </Link>
         </div>
